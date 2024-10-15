@@ -1,3 +1,4 @@
+
 function add(){
 
     let addfruit = document.querySelector('.input').value; // Getting value from the user
@@ -5,7 +6,7 @@ function add(){
    
     list.textContent = addfruit
     list.className = 'listOne'
-    list.innerHTML =addfruit +' <button class="Delete" onclick="toDelete()">X</button>' //simply using innerHTML to add button into a li;
+    list.innerHTML =addfruit +' <button class="Delete" onclick="toDelete(event)">X</button>' //simply using innerHTML to add button into a li;
 
     let olist = document.querySelector('.listClass') // selecting the UL for inserting new items
     olist.appendChild(list)
@@ -13,3 +14,7 @@ function add(){
 }
 
 
+function toDelete(event){
+    let fruitToDelete = event.target.parentElement;
+    fruitToDelete.remove();
+}
