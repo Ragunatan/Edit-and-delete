@@ -8,6 +8,9 @@ function add(){
     list.className = 'listOne'
     list.innerHTML =addfruit +' <button class="Delete" onclick="toDelete(event)">X</button>' //simply using innerHTML to add button into a li;
 
+    // creating edit button
+    list.innerHTML += '</button>  <button class="Edit" onclick="Edit(event)">Edit</button>' //adding EDit button to the list
+
     let olist = document.querySelector('.listClass') // selecting the UL for inserting new items
     olist.appendChild(list)
     
